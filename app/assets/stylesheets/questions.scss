@@ -1,0 +1,31 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  width: 500px;
+  padding: 40px;
+}
+
+.query {
+  border-left: 3px solid rgb(200,200,200);
+  display: flex;
+  margin: 10px;
+}
+
+.coach {
+  background-color: rgb(254, 170, 170);
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.message {
+  padding: 5px;
+}
+
+.image {
+  padding: 10px;
+}

@@ -1,0 +1,39 @@
+<% question = params[:question] %>
+
+<div class="wrapper">
+  <div class="container">
+    <h1>Stupid Coaching</h1>
+  </div>
+
+  <div class="container query">
+    <div class="image">
+      <%= image_tag('me2.jpg', class: "avatar") %>
+    </div>
+    <div class="message">
+      <p><%= question %></p>
+      <p><em>-You</em></p>
+    </div>
+  </div>
+
+  <% if question == 'I am going to work right now!' %>
+    <% answer = 'Great! [COACH HAS LEFT]' %>
+  <% elsif question[-1] != '?' %>
+    <% answer = "I don't care, get dressed and go to work!" %>
+  <% else %>
+    <% answer = 'Silly question, get dressed and go to work!' %>
+  <% end %>
+
+  <div class="container query coach">
+    <div class="image">
+      <%= image_tag('angry-coach', class: "avatar") %>
+    </div>
+    <div class="message">
+      <p><strong><%= answer %></strong></p>
+      <p><em>-Your coach</em></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <%= link_to 'Ask a new question', ask_path %>
+  </div>
+</div>
